@@ -1,0 +1,258 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+aside {
+    display: relative;
+    position: fixed;
+    z-index: 2;
+    background-color: black;
+    width: 5rem;
+    height: 100vh;
+    color: white;
+    left:0;
+    top:0;
+    border-radius: 0 1rem 1rem 0;
+    transition: width 1s;
+}
+aside:hover {
+    width: 15rem;
+}
+#asideHeader {
+    width:100%
+}
+#navLogoContainer {
+    display:inline-block;
+    align-items: center;
+    margin: 1.3rem;
+    border-radius: 0.75vw;
+    height: 2.5rem;
+    width: calc(100% - 2.6rem);
+    overflow: hidden;
+}
+#navLogo {
+    position: absolute;
+    height: 1.5rem;
+    float: left;
+    z-index: 0;
+}
+#navRight {
+    position:absolute;
+    filter: invert(100%);
+    right: 1.8rem;
+    height: 1.5rem;
+    z-index: 2;
+}
+#rightBackground {
+    position:absolute;
+    background: linear-gradient(90deg, rgba(36,0,13,0) 0%, rgba(0,0,0,1) 14%, rgba(0,0,0,1) 100%);
+    width: 4rem;
+    right: 0;
+    height: 2rem;
+    z-index: 1;
+}
+.navIconContainer {
+    display:flex;
+    align-items: center;
+    background-color: #000000;
+    margin: 1rem;
+    border-radius: 0.75vw;
+    height: 2.5rem;
+    overflow: hidden;
+    transition: filter 0.15s;
+}
+.navIconContainer:hover {
+    filter: invert(100%);
+    font-weight: bold;
+}
+.navIcon {
+    filter: invert(100%);
+    margin: 0.5rem 1rem 0.5rem 0.5rem;
+    height: 2rem;
+}
+.navText {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+#content {
+    display: block;
+    width: calc(100% - 5rem);
+    height: 100vh;
+    background-color: white;
+    margin-left: 5rem;
+}
+header {
+    width: calc(100% - 5rem);
+    position: fixed;
+    top: 0;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+/*DEMO*/
+#searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 2rem;
+    border: 3px solid rgba(0, 0, 0, 0.223);
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.14);
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+.searchInput {
+    font-family: 'Montserrat Alternates', sans-serif;
+    width: 33%;
+    text-align: center;
+    border: none;
+    background-color: #00000000;
+    border-right: 2px solid #00000055;
+    
+}
+#rightInput {
+    border-right: none;
+}
+input[type=date]:invalid::-webkit-datetime-edit {
+    color: rgb(191, 52, 52);
+}
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+}
+.category {
+    display: inline-block;
+    margin: auto;
+    margin-inline: 6vw;
+    filter: opacity(40%);
+    transition: filter 0.3s;
+}
+.catContent {
+    display: flex;
+    justify-content: center;
+}
+h5 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+}
+.category:hover {
+    filter: opacity(100%);
+    cursor: pointer;
+}
+
+.headIcon {
+    height: 2rem;
+}
+#btnSearch {
+    position: relative;
+    z-index: 2;
+    border: 3px solid rgb(0, 0, 0);
+    height: 110%;
+    margin-right: -4px;
+    width: 20%;
+    border-radius: 2rem;
+    background-color: #000000;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+hr {
+    margin: 0 2rem;
+    border-width: 0;
+	border-top: 1px solid #00000011;
+}
+
+.granjaImg {
+    width: 100%;
+    height: 40%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+h6{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.precio {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 900;
+    margin-top: 0.2rem;
+}
+#granjas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+    margin: 0 2rem;
+}
+.granja {
+    position: relative;
+    margin: 1rem;
+    width: 16rem;
+    height: 25rem;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.14);
+}
+h2 {
+    margin: 2rem 0 1rem 3rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.goods {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw 0;
+}
+.gItems {
+    margin: 0 5%;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: small;
+}
+.granjaDescripcion {
+    margin: 0.3rem;
+}
+.icon {
+    /* filter: opacity(0%); */
+    height: 2rem;
+}
+.host {
+    margin: 1rem 0;
+    width: calc(100% - 1.4rem);
+    display: flex;
+    padding: -0.7rem;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.hostProfile {
+    border-radius: 1rem;
+    height: 1rem;
+    margin-right: 0.6rem;
+}
+.checked {
+    color: orange;
+  }
+ .hostData {
+    text-align: end;
+    font-size: 0.7rem;
+}
+.hostName {
+    font-weight: bolder;
+    width: 65%;
+}
+
+.btnReservar {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    height: 3rem;
+}

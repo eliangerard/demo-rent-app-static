@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPI Cliente</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <!--Fuentes de texto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- Añade una libreria para agregar las estrellas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <aside>
+        <div id="navLogoContainer">
+            <img id="navLogo" src="src/gpi-w.png"/>
+            <div id="rightBackground">
+                <img id="navRight" src="src/right.png"/>
+            </div>
+        </div> 
+        <div class="navIconContainer">
+            <img class="navIcon" src="src/home.svg"/>
+            <h4 class="navText">Inicio</h4>
+        </div>
+        <div class="navIconContainer">
+            <img class="navIcon" src="src/rentar.png"/>
+            <h4 class="navText">Cliente</h4>
+        </div>
+        <div class="navIconContainer">
+            <img class="navIcon" src="src/seller.png"/>
+            <h4 class="navText">Anfitrión</h4>
+        </div>
+        <div class="navIconContainer">
+            <img class="navIcon" src="src/xml.png"/>
+            <h4 class="navText">XML</h4>
+        </div>
+    </aside>
+    
+    <div id="content">
+        <header>
+            <div id="searchBar">
+                <input class="searchInput" type="search" placeholder="¿Qué estás buscando?"> 
+                <input class="searchInput" type="date"> 
+                <input class="searchInput" id="rightInput" placeholder="Lugar">
+                <button id="btnSearch">Buscar</button>
+            </div>
+        </header>
+        <div class="categories">
+            <div class="category">
+                <div class="catContent">
+                    <img class="headIcon" src="src/clouds.png"/>
+                </div>
+                <h5>Aire libre</h5>
+            </div>
+            <div class="category">
+                <div class="catContent">
+                    <img class="headIcon" src="src/hall.png"/>
+                </div>
+                <h5>Salón</h5>
+            </div>
+            <div class="category">
+                <div class="catContent">
+                    <img class="headIcon" src="src/bussines.png"/>
+                </div>
+                <h5>Elegante</h5>
+            </div>
+            <div class="category">
+                <div class="catContent">
+                    <img class="headIcon" src="src/family.png"/>
+                </div>
+                <h5>Familiar</h5>
+            </div>
+            <div class="category">
+                <div class="catContent">
+                    <img class="headIcon" src="src/part.png"/>
+                </div>
+                <h5>Fiestas</h5>
+            </div>
+        </div>
+        <hr>
+        <h2>Populares</h2>
+        <section id="granjas">
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Al aire libre</h6>
+                <p class="precio">$3,500</p>
+                <p class="granjaDescripcion">Alamo Gordo 1014, Los Alamos 32900, Juan Aldama, Chihuahua</p>
+                <hr>
+                <div class="goods">
+                    <img class="icon" src="src/wc.png"/>
+                    <p class="gItems">2 baños</p>
+                    <img class="icon" src="src/pool.png"/>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <button class="btnReservar">Reservar</button>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <p class="hostName">Elian Gerard</p>
+                    <div class="hostData">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+            <article class="granja">
+                <img class="granjaImg" src="src/granja1.jpg"/>
+                <h6>Granja al sur</h6>
+                <p class="precio">$3,500</p>
+                <p>Alamo Gordo 1014, Los Alamos</p>
+                <hr>
+                <div class="goods">
+                    <p class="gItems">2 baños</p>
+                    <p class="gItems">Alberca</p>
+                </div>
+                <div class="host">
+                    <img class="hostProfile" src="src/ppic.png">
+                    <div class="hostData">
+                        <p class="hostName">Elian Gerard</p>
+                        <p class="hostRep">5 estrellas</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</body>
+</html>
