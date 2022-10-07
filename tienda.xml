@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="xmlstyle.css" type="text/css"?>
+<rentables>
+    <titulo>Granjas</titulo>
+    <granjas>
+        <granja>
+            <categoria>Al aire libre</categoria>
+            <puntaje>Puntaje 4/5</puntaje>
+            <costo>$3,500</costo>
+            <tiempo>5 horas</tiempo>
+            <ubicacion>Alamo Gordo #1014, Los Alamos 32900, Juan Aldama, Chihuahua</ubicacion>
+        </granja>
+        <granja>
+            <categoria>Familiar</categoria>
+            <puntaje>Puntaje 4/5</puntaje>
+            <costo>$4,500</costo>
+            <tiempo>6 horas</tiempo>
+            <ubicacion>Juan Pablo II #804, Col. Aeropuerto</ubicacion>
+        </granja>
+        <granja>
+            <categoria>Fiestas</categoria>
+            <puntaje>Puntaje 5/5</puntaje>
+            <costo>$5,000</costo>
+            <tiempo>5 horas</tiempo>
+            <ubicacion>Ignacio Rodríguez #4314, Nuevo Triunfo, Rio Sacramento Nte, 31140 Chihuahua, Chih.</ubicacion>
+        </granja>
+        <granja>
+            <categoria>Al aire libre</categoria>
+            <puntaje>Puntaje 4/5</puntaje>
+            <costo>$3,999</costo>
+            <tiempo>7 horas</tiempo>
+            <ubicacion>Ejido Robinson #11303, Balles de Chihuahua, 31314 Chihuahua, Chih.</ubicacion>
+        </granja>
+        <granja>
+            <categoria>Familiar</categoria>
+            <puntaje>Puntaje 5/5</puntaje>
+            <costo>$8,000</costo>
+            <tiempo>16 horas</tiempo>
+            <ubicacion>Carretera Nueva Aldama Kilómetro 6.5, Valles de Chihuahua, 31380 Chihuahua, Chih.</ubicacion>
+        </granja>
+        <granja>
+            <categoria>Al aire libre</categoria>
+            <puntaje>Puntaje 5/5</puntaje>
+            <costo>$4,000</costo>
+            <tiempo>5 horas</tiempo>
+            <ubicacion>Oaxaca #4104, Industrial, 31304 Chihuahua, Chih.</ubicacion>
+        </granja>
+        <granja>
+            <categoria>Fiestas</categoria>
+            <puntaje>Puntaje 4/5</puntaje>
+            <costo>$5,500</costo>
+            <tiempo>6 horas</tiempo>
+            <ubicacion>Perif. de la Juventud #7513, Predio la Cantera, 31115 Chihuahua, Chih.</ubicacion>
+        </granja>
+        <granja>
+            <categoria>Al aire libre</categoria>
+            <puntaje>Puntaje 3/5</puntaje>
+            <costo>$3,500</costo>
+            <tiempo>5 horas</tiempo>
+            <ubicacion>Perif. V. L. Toledano #4800, Cerro Cnel. II, Robinson, 31375 Chihuahua, Chih.</ubicacion>
+        </granja>
+    </granjas>
+    <header>
+        <a href="index.html" xmlns="http://www.w3.org/1999/xhtml">Inicio</a>
+        <a href="demo.html" xmlns="http://www.w3.org/1999/xhtml">Cliente</a>
+        <a href="formulario.html" xmlns="http://www.w3.org/1999/xhtml">Anfitrión</a>
+    </header>
+</rentables>
