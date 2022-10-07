@@ -84,6 +84,8 @@ aside:hover {
     background-color: white;
     margin-left: 5rem;
 }
+
+/* Hasta aquí es lo del menú lateral */
 header {
     width: calc(100% - 5rem);
     position: fixed;
