@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPI</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <!--Fuentes de texto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <aside>
+        <div id="navLogoContainer">
+            <img id="navLogo" src="src/gpi-w.png" />
+            <div id="rightBackground">
+                <img id="navRight" src="src/right.png" />
+            </div>
+        </div>
+        <a class="navIconContainer navLink" href="index.html">
+            <img class="navIcon" src="src/home.svg" />
+            <h4 class="navText">Inicio</h4>
+        </a>
+        <a class="navIconContainer navLink" href="demo.html">
+            <img class="navIcon" src="src/rentar.png" />
+            <h4 class="navText">Cliente</h4>
+        </a>
+        <a class="navIconContainer navLink" href="form.html">
+            <img class="navIcon" src="src/seller.png" />
+            <h4 class="navText">Anfitrión</h4>
+        </a>
+        <a class="navIconContainer navLink" href="tienda.xml">
+            <img class="navIcon" src="src/xml.png" />
+            <h4 class="navText">XML</h4>
+        </a>
+    </aside>
+    
+    <div id="content">
+        <section class="flex-container">
+            <div class="caja1" >
+                <img class="img" src="src/granja.png">
+            </div>
+    
+            <div class="caja2">
+                <img class="img2" src="src/gpi-b.png">
+                <div class="registro">Registra tu Granja</div>
+                <div class="sub">Conviertete en anfitrion</div>
+                <div>
+                <table>
+                    <td>
+                        <form  method="get">
+                            
+                            <div class="form"><input class="input" type="textarea" placeholder="Nombre del Anfitrion"required></div>
+                            <br>
+                            <div class="form"><input class="input" type="textarea" placeholder="Correo Electronico"required></div>
+                            <br>
+                            <div class="form"><input class="input" type="textarea" placeholder="Direccion de la Granja"required></div>
+                            <br>
+                            <div class="form"><input class="input" type="textarea" placeholder="Telefono"required></div>
+                            <br>
+                             <div class="form"><select class="input" name="menu">
+                                <option value="tipoGranja">Que tipo de granja es</option>
+                                <option value="aireLibre">Al aire libre</option>
+                                <option value="familiar">Familiar</option>
+                                <option value="fiestas">Fiestas</option> 
+                              </select>
+                             </div>
+                            <br>
+                            <div class="form"><label class="input">Agrega una imagen de tu granja      </label><input type="file" name="foto" accept="image/*"></div>
+                            <br>
+                            <div class="form"><label class="input">Agrega una imagen de tu INE       </label><input type="file" name="foto" accept="image/*"></div>
+                            <br>
+                            <div class="form"><input class="input" id="diferente" type="textarea" placeholder="Agrega una breve descripcion de tu granja"required></div>
+                            <br>
+                        </form>
+                    </td>
+    
+                </table>
+            </div>
+            <div class="boton" tex>Registrar</div>
+        </section>
+    </div>
+</body>
+</html>
+
+
+
+
