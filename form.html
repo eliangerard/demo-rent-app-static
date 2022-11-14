@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,10 @@
     <!--Fuentes de texto-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,700;1,400&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <aside>
         <div id="navLogoContainer">
@@ -36,55 +39,91 @@
             <h4 class="navText">XML</h4>
         </a>
     </aside>
-    
+
     <div id="content">
         <section class="flex-container">
-            <div class="caja1" >
+            <div class="caja1">
+                <div class = "reg-container" id="registro">
+                    <section class="regsuc">¡El registro ha sido exitoso!</section>
+                    <img src="src/placeholder.png"id="dimg"/>
+                    <section class="regsucd" id="d1" onclick="registrar()">Nombre: </section>
+                    <section class="regsucd" id="d2" onclick="registrar()">Correo: </section>
+                    <section class="regsucd" id="d3" onclick="registrar()">Telefono: </section>
+                    <section class="regsucd" id="d4" onclick="registrar()">Direccion: </section>
+                    <section class="regsucd" id="d5" onclick="registrar()">Tipo de granja: </section>
+                    <section class="regsucd" id="d6" onclick="registrar()">Tiempo de renta: </section>
+                    <section class="regsucd" id="d7" onclick="registrar()">Descripcion: </section>
+                    <section class="regsucd" id="d8" onclick="registrar()">Costo: </section>
+                    <section class="regsuc" id="d9">Vista Anfitrion </section>
+                </div>
                 <img class="img" src="src/granja.png">
             </div>
-    
+            
+
             <div class="caja2">
                 <img class="img2" src="src/gpi-b.png">
                 <div class="registro">Registra tu Granja</div>
                 <div class="sub">Conviertete en anfitrion</div>
                 <div>
-                <table>
-                    <td>
-                        <form  method="get">
-                            
-                            <div class="form"><input class="input" type="textarea" placeholder="Nombre del Anfitrion"required></div>
-                            <br>
-                            <div class="form"><input class="input" type="textarea" placeholder="Correo Electronico"required></div>
-                            <br>
-                            <div class="form"><input class="input" type="textarea" placeholder="Direccion de la Granja"required></div>
-                            <br>
-                            <div class="form"><input class="input" type="textarea" placeholder="Telefono"required></div>
-                            <br>
-                             <div class="form"><select class="input" name="menu">
-                                <option value="tipoGranja">Que tipo de granja es</option>
-                                <option value="aireLibre">Al aire libre</option>
-                                <option value="familiar">Familiar</option>
-                                <option value="fiestas">Fiestas</option> 
-                              </select>
-                             </div>
-                            <br>
-                            <div class="form"><label class="input">Agrega una imagen de tu granja      </label><input type="file" name="foto" accept="image/*"></div>
-                            <br>
-                            <div class="form"><label class="input">Agrega una imagen de tu INE       </label><input type="file" name="foto" accept="image/*"></div>
-                            <br>
-                            <div class="form"><input class="input" id="diferente" type="textarea" placeholder="Agrega una breve descripcion de tu granja"required></div>
-                            <br>
-                        </form>
-                    </td>
-    
-                </table>
-            </div>
-            <div class="boton" tex>Registrar</div>
+                    <table>
+                        <td>
+                            <form onSubmit="return false;" method="get">
+
+                                <div class="form"><input class="input" type="textarea"
+                                        placeholder="Nombre del Anfitrion" id="nombre" name="val" 
+                                        required pattern="[A-Z a-z]+\s?" title="No ingreses numeros en tu nombre"
+                                        maxlength="25" onblur="error('nombre')"></div>
+                                <br>
+                                <div class="form"><input class="input" type="textarea" placeholder="Correo Electronico"
+                                    id="email" name="val" onblur="validarEmail()" required></div>
+                                <br>
+                                <div class="form"><input class="input" type="textarea"
+                                        placeholder="Direccion de la Granja" id="direccion" name="val" 
+                                        maxlength="35" onblur = "error('direccion')" required></div>
+                                <br>
+                                <div class="form"><input class="input" type="textarea" placeholder="Telefono" 
+                                    id="tel" name="val" minlength="10" maxlength="13" 
+                                    required pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" 
+                                    title="Cumple con el formato: xxx-xxx-xxxx" onblur = "error('tel')">
+                                </div>
+                                <br>
+                                <div class="form"><select class="input" id ="menu"
+                                    placeholder ="Que tipo de granja es?" name="val" onblur = "error('nombre')" required>
+                                        <option disabled selected>Que tipo de granja es</option>
+                                        <option value="al aire libre">Al aire libre</option>
+                                        <option value="familiar">Familiar</option>
+                                        <option value="fiestas">Fiestas</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form"><input class="input" type="textarea" placeholder="Tiempo de renta" 
+                                    id="tiempo" name="val" maxlength="10" onblur = "error('tiempo')" required> </div>
+                                <br>
+                                <div class="form"><label class="input">Agrega una imagen de tu granja </label>
+                                    <input type="file" id="foto" name="fotoGranja" accept="image/*" 
+                                    onchange="imagen()" required></div>
+                                <br>
+                                <div class="form"><label class="input">Agrega una imagen de tu INE </label><input
+                                        type="file" name="val" accept="image/*" id="INE" required></div>
+                                <br>
+                                <div class="form"><input class="input" id="diferente" name="val"type="textarea"
+                                        placeholder="Agrega una breve descripcion de tu granja" 
+                                        minlength="1" maxlength="50" onblur = "error('diferente')" required></div>
+                                <br>
+                                <div class="form"><input class="input" type="textarea" placeholder="Costo" 
+                                    id="costo" name="val" minlength="2" maxlength="7" 
+                                    required pattern = "^\$[0-9]+" title="Ingresa tu cantidad en simbolo de pesos"
+                                    onblur = "error('costo')">
+                                </div>
+                                <input type="submit" class="boton" id="btnRegistrar" value="Registrar" onclick="registrar()"></div>
+                            </form>
+                        </td>
+
+                    </table>
+                </div>
         </section>
     </div>
+    <script src="form.js"></script>
 </body>
+
 </html>
-
-
-
-

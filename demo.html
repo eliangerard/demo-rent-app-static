@@ -14,7 +14,7 @@
     <!-- Añade una libreria para agregar las estrellas -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="loadGranjas()">
     <aside>
         <div id="navLogoContainer">
             <img id="navLogo" src="src/gpi-w.png" />
@@ -43,10 +43,11 @@
     <div id="content">
         <header>
             <div id="searchBar">
-                <input class="searchInput" type="search" placeholder="¿Qué estás buscando?"> 
-                <input class="searchInput" type="date"> 
+                <input class="searchInput" type="number" placeholder="mínimo - $0" id="inpMin" min="0" max="10000"> 
+                <input class="searchInput" type="number" placeholder="máximo - $10,000" id="inpMax" min="0" max="10000"> 
+                <input class="searchInput" type="date" id="fecha"> 
                 <input class="searchInput" id="rightInput" placeholder="Lugar">
-                <button id="btnSearch">Buscar</button>
+                <button id="btnSearch" onclick="buscar()">Buscar</button>
             </div>
             <img id="logo" src="src/gpi-wb.png"/>
         </header>
@@ -83,237 +84,20 @@
             </li>
         </ul>
         <hr>
-        <h2>Populares</h2>
+        <div id="mostrarBusqueda">
+            <div id="mbIzq">
+                <h2 id="busqueda">Populares</h2>
+            </div>
+            <i id="resultados"></i>
+
+        </div>
         <section id="granjas">
-            <article class="granja">
-                <img class="granjaImg" src="src/granja1.jpg"/>
-                <div class="granjaTop">
-                    <h6 class="granjaCategoria">Al aire libre</h6>
-                    <div class="host">
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star rating"></span>
-                    </div>
-                </div>
-                <div class="costo">
-                    <p class="precio">$3,500</p>
-                    <p class="tiempo">5 horas</p>
-                </div>
-                <div class="ubi">
-                    <img class="ubiIcon" src="src/location.png"/>
-                    <p class="granjaUbi">Alamo Gordo #1014, Los Alamos 32900, Juan Aldama, Chihuahua</p>
-                </div>
-                <hr>
-                <div class="goods">
-                    <img class="icon" src="src/wc.png"/>
-                    <p class="gItems">2 baños</p>
-                    <img class="icon" src="src/pool.png"/>
-                    <p class="gItems">Alberca</p>
-                </div>
-                <button class="btnReservar">Reservar</button>
-            </article>
-            <article class="granja">
-                <img class="granjaImg" src="src/granja2.jpg"/>
-                <div class="granjaTop">
-                    <h6 class="granjaCategoria">Familiar</h6>
-                    <div class="host">
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star rating"></span>
-                    </div>
-                </div>
-                <div class="costo">
-                    <p class="precio">$4,500</p>
-                    <p class="tiempo">6 horas</p>
-                </div>
-                <div class="ubi">
-                    <img class="ubiIcon" src="src/location.png"/>
-                    <p class="granjaUbi">Juan Pablo II #804, Col. Aeropuerto</p>
-                </div>
-                <hr>
-                <div class="goods">
-                    <img class="icon" src="src/wc.png"/>
-                    <p class="gItems">4 baños</p>
-                </div>
-                <button class="btnReservar">Reservar</button>
-            </article>
-            <article class="granja">
-                <img class="granjaImg" src="src/granja3.jpg"/>
-                <div class="granjaTop">
-                    <h6 class="granjaCategoria">Fiestas</h6>
-                    <div class="host">
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                    </div>
-                </div>
-                <div class="costo">
-                    <p class="precio">$5,000</p>
-                    <p class="tiempo">5 horas</p>
-                </div>
-                <div class="ubi">
-                    <img class="ubiIcon" src="src/location.png"/>
-                    <p class="granjaUbi">Ignacio Rodríguez #4314, Nuevo Triunfo, Rio Sacramento Nte, 31140 Chihuahua, Chih.</p>
-                </div>
-                <hr>
-                <div class="goods">
-                    <img class="icon" src="src/wc.png"/>
-                    <p class="gItems">4 baños</p>
-                    <img class="icon" src="src/pool.png"/>
-                    <p class="gItems">Alberca</p>
-                </div>
-                <button class="btnReservar">Reservar</button>
-            </article>
-            <article class="granja">
-                <img class="granjaImg" src="src/granja4.jpg"/>
-                <div class="granjaTop">
-                    <h6 class="granjaCategoria">Al aire libre</h6>
-                    <div class="host">
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star rating"></span>
-                    </div>
-                </div>
-                <div class="costo">
-                    <p class="precio">$3,999</p>
-                    <p class="tiempo">7 horas</p>
-                </div>
-                <div class="ubi">
-                    <img class="ubiIcon" src="src/location.png"/>
-                    <p class="granjaUbi">Ejido Robinson #11303, Balles de Chihuahua, 31314 Chihuahua, Chih.</p>
-                </div>
-                <hr>
-                <div class="goods">
-                    <img class="icon" src="src/wc.png"/>
-                    <p class="gItems">2 baños</p>
-                </div>
-                <button class="btnReservar">Reservar</button>
-            </article>
-            <article class="granja">
-                <img class="granjaImg" src="src/granja5.jpg"/>
-                <div class="granjaTop">
-                    <h6 class="granjaCategoria">Familiar</h6>
-                    <div class="host">
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                    </div>
-                </div>
-                <div class="costo">
-                    <p class="precio">$8,000</p>
-                    <p class="tiempo">16 horas</p>
-                </div>
-                <div class="ubi">
-                    <img class="ubiIcon" src="src/location.png"/>
-                    <p class="granjaUbi">Carretera Nueva Aldama Kilómetro 6.5, Valles de Chihuahua, 31380 Chihuahua, Chih.</p>
-                </div>
-                <hr>
-                <div class="goods">
-                    <img class="icon" src="src/wc.png"/>
-                    <p class="gItems">3 baños</p>
-                    <img class="icon" src="src/bedrooms.png"/>
-                    <p class="gItems">4 cuartos</p>
-                </div>
-                <button class="btnReservar">Reservar</button>
-            </article>
-            <article class="granja">
-                <img class="granjaImg" src="src/granja6.jpg"/>
-                <div class="granjaTop">
-                    <h6 class="granjaCategoria">Al aire libre</h6>
-                    <div class="host">
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                    </div>
-                </div>
-                <div class="costo">
-                    <p class="precio">$4,000</p>
-                    <p class="tiempo">5 horas</p>
-                </div>
-                <div class="ubi">
-                    <img class="ubiIcon" src="src/location.png"/>
-                    <p class="granjaUbi">Oaxaca #4104, Industrial, 31304 Chihuahua, Chih.</p>
-                </div>
-                <hr>
-                <div class="goods">
-                    <img class="icon" src="src/wc.png"/>
-                    <p class="gItems">4 baños</p>
-                    <img class="icon" src="src/pool.png"/>
-                    <p class="gItems">Alberca</p>
-                </div>
-                <button class="btnReservar">Reservar</button>
-            </article>
-            <article class="granja">
-                <img class="granjaImg" src="src/granja7.jpg"/>
-                <div class="granjaTop">
-                    <h6 class="granjaCategoria">Fiestas</h6>
-                    <div class="host">
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star rating"></span>
-                    </div>
-                </div>
-                <div class="costo">
-                    <p class="precio">$5,500</p>
-                    <p class="tiempo">6 horas</p>
-                </div>
-                <div class="ubi">
-                    <img class="ubiIcon" src="src/location.png"/>
-                    <p class="granjaUbi">Perif. de la Juventud #7513, Predio la Cantera, 31115 Chihuahua, Chih.</p>
-                </div>
-                <hr>
-                <div class="goods">
-                    <img class="icon" src="src/wc.png"/>
-                    <p class="gItems">2 baños</p>
-                    <img class="icon" src="src/pool.png"/>
-                    <p class="gItems">Alberca</p>
-                </div>
-                <button class="btnReservar">Reservar</button>
-            </article>
-            <article class="granja">
-                <img class="granjaImg" src="src/granja8.jpg"/>
-                <div class="granjaTop">
-                    <h6 class="granjaCategoria">Al aire libre</h6>
-                    <div class="host">
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star checked rating"></span>
-                        <span class="fa fa-star rating"></span>
-                        <span class="fa fa-star rating"></span>
-                    </div>
-                </div>
-                <div class="costo">
-                    <p class="precio">$3,500</p>
-                    <p class="tiempo">5 horas</p>
-                </div>
-                <div class="ubi">
-                    <img class="ubiIcon" src="src/location.png"/>
-                    <p class="granjaUbi">Perif. V. L. Toledano #4800, Cerro Cnel. II, Robinson, 31375 Chihuahua, Chih.</p>
-                </div>
-                <hr>
-                <div class="goods">
-                    <img class="icon" src="src/wc.png"/>
-                    <p class="gItems">2 baños</p>
-                </div>
-                <button class="btnReservar">Reservar</button>
-            </article>
-            <img id="loading" src="src/loading.gif"/>
-            
+            <img id="loading" src="src/loading.gif"/>            
         </section>
+        <footer id="demoFooter">
+            <img id="plus" src="src/plus.png" onclick="loadGranjas(false)"/>
+        </footer>
     </div>
+    <script type="module" src="helpers/demo.js"></script>
 </body>
 </html>

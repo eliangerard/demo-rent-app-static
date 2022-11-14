@@ -1,0 +1,11 @@
+ {
+    "categorias" : ["Al aire libre", "Familiar", "Salón", "Elegante", "Fiestas"],
+    "direcciones": [
+        "Alamo Gordo #1014, Los Alamos 32900, Juan Aldama, Chihuahua",
+        "Juan Pablo II #804, Col. Aeropuerto",
+        "Ignacio Rodríguez #4314, Nuevo Triunfo, Rio Sacramento Nte, 31140 Chihuahua, Chih.",
+        "Ejido Robinson #11303, Balles de Chihuahua, 31314 Chihuahua, Chih.",
+        "Carretera Nueva Aldama Kilómetro 6.5, Valles de Chihuahua, 31380 Chihuahua, Chih.",
+        "Oaxaca #4104, Industrial, 31304 Chihuahua, Chih."
+    ]
+}
